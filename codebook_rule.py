@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from typing import Any, Dcit, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 
 ###############################################
@@ -58,3 +58,4 @@ def load_codebook(path):
 
 cb = load_codebook(path)
 
+print(cb.head)
