@@ -1,6 +1,5 @@
 import pandas as pd
-import re
-from typing import Any, Optional, List, Tuple
+from openpyxl import Workbook
 
 
 # 파일 불러오기 및 전처리
@@ -91,156 +90,35 @@ summary_df = pd.DataFrame({
 
 
 
-# 검증 요약 엑셀 저장
-summary_df.to_excel("data/validation_summary.xlsx", index=False)
+#########################
 
+# 1) range 그룹 만들기 (min,max별로 문항 묶기)
+g = (codebook_df.loc[codebook_df["check_range"], ["문항", "range_min", "range_max"]]
+    .groupby(["range_min", "range_max"])["문항"]
+    .apply(lambda s: ", ".join(s))
+    .reset_index(name="items"))
 
+# 2) 엑셀 작성
+out_path = "data/validation_cart.xlsx"
+wb = Workbook()
+ws = wb.active
+ws.title = "검증_장바구니"
 
+# 결측 / 중복응답 (한 셀에 쭉)
+ws["A1"] = "결측"
+ws["A2"] = ", ".join(missing_items)
 
+ws["B1"] = "중복응답"
+ws["B2"] = ", ".join(multiple_items)
 
+# 범위 블록 (C열부터)
+start_col = 3  # C
+for i, r in enumerate(g.itertuples(index=False), start=0):
+    col = start_col + i
+    ws.cell(row=1, column=col, value="범위")
+    ws.cell(row=2, column=col, value=r.items)
+    ws.cell(row=3, column=col, value=f"{int(r.range_min)}, {int(r.range_max)}")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-######################
-# 옵션 문자열 파싱
-######################
-# "1: 라벨 ... 2: 라벨 ..." 형태를 연속 문자열에서도 잡아내는 패턴
-# CODE_LABEL_PATTERN = re.compile(
-#     r"""
-#     (?P<code>\d+)          # 1,2,10...
-#     \s*[:\.]\s*            # ":" 또는 "." (혹시 1.  라벨도 대응)
-#     (?P<label>.*?)         # 라벨 (lazy)
-#     (?=                    # 다음 코드 시작이거나 문자열 끝
-#         \s*\d+\s*[:\.]
-#         | \Z
-#     )
-#     """,
-#     re.VERBOSE | re.DOTALL
-# )
-
-# def norm_space(s: str) -> str:
-#     """문자열 정규화 함수
-
-#     Args:
-#         s (str): 정규화할 문자열
-#     Returns:
-#         str: 정규화된 문자열
-#     """
-#     s = s.replace("\u00a0", " ")                 # NBSP(줄바꿈 되지않는 공백)
-#     s = re.sub(r"[ \t]+", " ", s)                 # 여러 공백/탭 -> 한칸 공백
-#     s = re.sub(r"\n{2,}", "\n", s)                # 여러 줄바꿈 -> 한줄바꿈
-#     return s.strip()                              # 앞뒤 공백 제거
-
-
-# def parse_options(options: Any) -> List[int]:
-#     """
-#     returns:
-#       - allowed_codes: List[int]
-
-#     options가 NaN/None이rjsk
-#     코드-라벨 패턴이 없으면 [] 반환
-#     """
-#     if options is None or (isinstance(options, float) and pd.isna(options)):
-#         return []
-
-#     text = norm_space(str(options))
-
-#     matches = list(CODE_LABEL_PATTERN.finditer(text))
-#     if not matches:
-#         return []
-
-#     allowed_codes: List[int] = []
-
-#     for m in matches:
-#         code_str = m.group("code").strip()
-#         allowed_codes.append(int(code_str))
-
-#     # 중복 제거 + 정렬
-#     allowed_codes = sorted(set(allowed_codes))
-
-#     return allowed_codes
-
-
-# def range_from_allowed_codes(allowed_codes: List[int]) -> Optional[Tuple[int, int]]:
-#     """
-#     allowed_codes가 있으면 (min, max) 반환
-#     없으면 None
-#     """
-#     if not allowed_codes:
-#         return None
-
-#     return min(allowed_codes), max(allowed_codes)
-
-# #########################
-# # between_a_b 룰 생성
-# # 현재는 범주형만 만듬, 숫자형도 범위로 표현해야하면 따로 만들듯
-# #########################
-# def build_between_rule(item: str, allowed_codes: List[int]) -> Optional[dict]:
-#     if not allowed_codes:
-#         return None
-
-#     return {
-#         "rule_type": "between_a_b",
-#         "source": "codebook",
-#         "min": min(allowed_codes),
-#         "max": max(allowed_codes),
-#         "inclusive_min": True,
-#         "inclusive_max": True,
-#     }
-
-# ########################
-# # 테스트 함수
-# ########################
-# def test_between_rules(cb: pd.DataFrame, limit: int = 50) -> pd.DataFrame:
-#     """
-#     codebook df(cb)에서
-#     options -> allowed_codes 파싱
-#     allowed_codes -> between_a_b rule 생성
-#     결과를 DataFrame으로 반환
-#     """
-#     rows = []
-#     for _, r in cb.iterrows():
-#         item = str(r["item"]).strip()
-#         options = r.get("options")
-
-#         codes = parse_options(options)
-#         rule = build_between_rule(item, codes)
-
-#         if rule is None:
-#             continue
-
-#         rows.append({
-#             "item": item,
-#             "codes_count": len(codes),
-#             "allowed_codes_preview": codes[:10],
-#             "min": rule["min"],
-#             "max": rule["max"],
-#             "inclusive_min": rule["inclusive_min"],
-#             "inclusive_max": rule["inclusive_max"],
-#         })
-
-#     df = pd.DataFrame(rows).sort_values(["item"]).reset_index(drop=True)
-
-#     if limit is not None and len(df) > limit:
-#         return df.head(limit)
-#     return df
-
-
-# # ---- 실행 ----
-# between_df = test_between_rules(cb, limit=50)
-
-# print("between_a_b 생성된 문항 수:", len(between_df))
-# print(between_df.to_string(index=False))
+wb.save(out_path)
+print(f"saved: {out_path}")
 
