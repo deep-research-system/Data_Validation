@@ -1,5 +1,5 @@
 import pandas as pd
-from openpyxl import Workbook
+from v_cart  import export_cart_xlsx
 
 
 # 파일 불러오기 및 전처리
@@ -68,19 +68,6 @@ missing_items = codebook_df.loc[codebook_df["check_missing"], "문항"].tolist()
 multiple_items = codebook_df.loc[codebook_df["check_multi"], "문항"].tolist()
 range_items = codebook_df.loc[codebook_df["check_range"], "문항"].tolist()
 
-
-
-
-
-
-print(codebook_df[["문항", "codes_values", "check_range", "range_min", "range_max"]].head())
-print(
-    codebook_df.loc[
-        codebook_df["문항"] == "B2",
-        ["문항", "codes_values", "check_range", "range_min", "range_max"]
-    ]
-)
-
 # 검증 요약 데이터프레임 생성
 summary_df = pd.DataFrame({
     "결측": [",".join(missing_items)],
@@ -88,37 +75,31 @@ summary_df = pd.DataFrame({
     "범위": [",".join(range_items)]
 })
 
-
-
 #########################
 
-# 1) range 그룹 만들기 (min,max별로 문항 묶기)
-g = (codebook_df.loc[codebook_df["check_range"], ["문항", "range_min", "range_max"]]
-    .groupby(["range_min", "range_max"])["문항"]
-    .apply(lambda s: ", ".join(s))
-    .reset_index(name="items"))
+# range 그룹 만들기 (min,max별로 문항 묶기)
+g = (codebook_df.loc[codebook_df["check_range"], ["문항", "range_min", "range_max"]]    # codebook_df["check_range"] == True인 행 필터링
+    .groupby(["range_min", "range_max"])["문항"]                                        # 'range_min', 'range_max' 컬럼으로 그룹화   ex) (1,5)그룹["A1", "A2"], (10,20)그룹["B1", "B2"]
+    .apply(lambda s: ", ".join(s))                                                      # 그룹별 '문항'들을 쉼표로 연결된 문자열로 변환 ex) (1,5)그룹 "A1, A2", (10,20)그룹 "B1, B2"
+    .reset_index(name="items"))                                                      # 인덱스를 초기화하고 'items'라는 이름의 컬럼으로 결과 저장
+print("범위 그룹화 결과:\n", g)
 
-# 2) 엑셀 작성
-out_path = "data/validation_cart.xlsx"
-wb = Workbook()
-ws = wb.active
-ws.title = "검증_장바구니"
+range_columns = [{
+        "title": "범위",
+        "items": r.items,
+        "values": f"{int(r.range_min)}, {int(r.range_max)}"}
+    for r in g.itertuples(index=False)              # itertuples : DataFrame의 각 행을 튜플로 반환
+]
+print("범위 컬럼들:\n", range_columns)
+columns = [
+    {"title": "결측", "items": ",".join(missing_items), "values": ""},
+    {"title": "중복 응답", "items": ",".join(multiple_items), "values": ""},
+] + range_columns
 
-# 결측 / 중복응답 (한 셀에 쭉)
-ws["A1"] = "결측"
-ws["A2"] = ", ".join(missing_items)
 
-ws["B1"] = "중복응답"
-ws["B2"] = ", ".join(multiple_items)
-
-# 범위 블록 (C열부터)
-start_col = 3  # C
-for i, r in enumerate(g.itertuples(index=False), start=0):
-    col = start_col + i
-    ws.cell(row=1, column=col, value="범위")
-    ws.cell(row=2, column=col, value=r.items)
-    ws.cell(row=3, column=col, value=f"{int(r.range_min)}, {int(r.range_max)}")
-
-wb.save(out_path)
-print(f"saved: {out_path}")
-
+out = export_cart_xlsx(
+    columns=columns,
+    out_path="data/validation_cart.xlsx",
+    start_col=1,  # A부터
+)
+print("saved:", out)
