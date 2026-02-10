@@ -5,7 +5,7 @@ from docling.document_converter import DocumentConverter
 
 
 # 입력 PDF
-source = "data/test_pdf.pdf"
+source = "data/pdf_test2.pdf"
 
 # 출력 디렉터리
 out_dir = Path("data/pdf_markdown")
