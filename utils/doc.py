@@ -5,7 +5,7 @@ from docling.document_converter import DocumentConverter
 
 
 # 입력 PDF
-source = "data/pdf_text.pdf"
+source = "data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.pdf"
 
 # 출력 디렉터리
 out_dir = Path("data")

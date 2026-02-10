@@ -49,7 +49,7 @@ def ocr_pdf_korean(
 
 if __name__ == "__main__":
     result = ocr_pdf_korean(
-        pdf_path="data/pdf_text.pdf",
-        out_txt="data/pdf_ocr.txt",
+        pdf_path="data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.pdf",
+        out_txt="data/pdf_ocr(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.txt",
     )
     print("OCR 완료:", result)

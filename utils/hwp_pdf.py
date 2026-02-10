@@ -29,8 +29,8 @@ def convert_hwp_to_pdf(hwp_path: str | Path, pdf_path: str | Path):
 
 if __name__ == "__main__":
     pdf_path = convert_hwp_to_pdf(
-        hwp_path="data/test_hwp.hwp",
-        pdf_path="data/pdf_text.pdf",
+        hwp_path="data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.hwp",
+        pdf_path="data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.pdf",
     )
     
     print(f"변환 완료: {pdf_path}")
