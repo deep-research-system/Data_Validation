@@ -1,15 +1,14 @@
 from pathlib import Path
 from docling.document_converter import DocumentConverter
 
-# 실행 오래걸림, 글자 잘 나옴, 
+# 실행 40~50초, 글자 잘 나옴, 표 같은 레이아웃 지킴
 
 
 # 입력 PDF
-source = "data/test_pdf.pdf"
+source = "data/pdf_text.pdf"
 
 # 출력 디렉터리
-out_dir = Path("data/pdf_markdown")
-out_dir.mkdir(parents=True, exist_ok=True)
+out_dir = Path("data")
 
 # 출력 파일명 (PDF 이름 그대로 .md)
 out_md = out_dir / (Path(source).stem + ".md")

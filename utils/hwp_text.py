@@ -44,4 +44,4 @@ def hwp_to_txt(hwp_path: str, out_txt: str):
 
 
 # 사용 예시
-hwp_to_txt("data/test_hwp.hwp", "data/output.txt")
+hwp_to_txt("data/test_hwp.hwp", "data/hwp_text.txt")
