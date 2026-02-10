@@ -1,0 +1,40 @@
+# 데이터 폴더
+data/
+
+# HWP (한글 파일)
+*.hwp
+
+# Data / outputs
+data/
+*.hwp
+*.xlsx
+*.xls
+*.csv
+
+# Python 캐시
+__pycache__/
+*.pyc
+
+# 가상환경
+.venv/
+venv/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+# Python cache
+__pycache__/
+*.pyc
+
+
+# IDE
+.vscode/
+.idea/
+
+
+.env.env
+.env
