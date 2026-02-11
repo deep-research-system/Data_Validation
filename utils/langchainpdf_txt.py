@@ -15,7 +15,7 @@ async def main():
     
     full_text = "\n".join([doc.page_content for doc in docs])
     
-    out_path = Path("data/output.txt")
+    out_path = Path("output/langchain.txt")
     out_path.write_text(full_text, encoding="utf-8")
     
     print(f"저장완료: {out_path}")

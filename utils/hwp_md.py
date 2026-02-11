@@ -120,5 +120,5 @@ def save_md(hwpx_path: str | Path, md_path: str | Path) -> Path:
 
 
 if __name__ == "__main__":
-    out = save_md("data/hwpx(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.hwpx", "data/test_table_only.md")
+    out = save_md("output/hwpx(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.hwpx", "data/test_table_only.md")
     print(f"생성 완료: {out}")

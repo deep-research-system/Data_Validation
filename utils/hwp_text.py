@@ -44,4 +44,4 @@ def hwp_to_txt(hwp_path: str, out_txt: str):
 
 
 # 사용 예시
-hwp_to_txt("data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.hwp", "data/hwp_text(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.txt")
+hwp_to_txt("data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.hwp", "output/hwp_text(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.txt")
