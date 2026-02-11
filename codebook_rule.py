@@ -11,8 +11,12 @@ codebook_df = cb.dropna(subset=["문항"]).reset_index(drop=True)
 
 print(codebook_df.head())
 
-# range_items 범위 지정
-def parse_options(응답: str) -> list[dict]:
+##############################
+# 응답 컬럼 파싱
+##############################
+
+# 응답 문자열에서 선택지 코드 추출 함수
+def parse_codes(options_text: str) -> list[int]:
     """
     코드북의 '응답' 문자열에서 선택지 코드를 추출한다.
 
@@ -31,8 +35,8 @@ def parse_options(응답: str) -> list[dict]:
         code_str (str): line에서 ':' 이전 부분을 잘라낸 문자열.
         code_values (list[int]): 형식 검증을 통과한 정수 코드들을 누적 저장하는 리스트.
     """
-    pairs = []
-    for raw in 응답.splitlines():  # 문자열을 줄단위로 쪼개기 ex)["1: 남자", "2: 여자", "3: 기타"]
+    codes = []
+    for raw in options_text.splitlines():  # 문자열을 줄단위로 쪼개기 ex)["1: 남자", "2: 여자", "3: 기타"]
         line = raw.strip()  # 앞뒤 공백 제거
         if not line:
             continue
@@ -45,92 +49,96 @@ def parse_options(응답: str) -> list[dict]:
 
         # 2) 구분자 앞 부분을 코드 후보로
         code_str = line[:colon_index].strip()
-        label = line[colon_index + 1 :].strip()
 
         # 3) 숫자인 경우만 코드로 인정
         if code_str.isdigit():              # isdigit() : 문자열이 숫자로만 이루어져있는지 확인
-            pairs.append({"code": int(code_str), "label": label})
+            codes.append(int(code_str))
             
-    return pairs
+    return codes
 
 # 'codes_values' 컬럼에 추출된 코드 리스트 저장
-codebook_df["codes_values"] = codebook_df["응답"].apply(parse_options)
+codebook_df["codes_values"] = codebook_df["응답"].apply(parse_codes)
 
 codebook_df["check_range"] = codebook_df["codes_values"].apply(bool)
 
-codebook_df["range_min"] = codebook_df["codes_values"].apply(
-    lambda x: min(o["code"] for o in x) if x else None
-)
-codebook_df["range_max"] = codebook_df["codes_values"].apply(
-    lambda x: max(o["code"] for o in x) if x else None
+################################
+# 범위 조건 생성 및 저장
+################################
 
-)
+range_min_list = []
+range_max_list = []
+
+# 각 문항별로 min, max 코드값 계산
+for codes in codebook_df["codes_values"]:
+    if not codes:
+        range_min_list.append(None)
+        range_max_list.append(None)
+        continue
+
+
+    range_min_list.append(min(codes))
+    range_max_list.append(max(codes))
+    
+codebook_df["range_min"] = range_min_list
+codebook_df["range_max"] = range_max_list
+
 
 codebook_df["check_missing"] = True
 codebook_df["check_multi"] = True
 
 
-# json 구조화
-records = []
+# 범위 컬럼값 생성
+range_map = {}  # (range_min, range_max) -> [문항들]
 
-for r in codebook_df.itertuples(index=False):
-    records.append({
-        "item": r.문항,
-        "question": r.질문,
-        "options": r.codes_values,
-    })
-    
-out_path = Path("data/codebook.json")
-out_path.parent.mkdir(parents=True, exist_ok=True)
+# 각 행을 순회하며 범위 조건이 있는 문항들을 그룹화
+for _, row in codebook_df.iterrows():       # df.itterrows(): 각 행을 하나씩 꺼내서 처리
+    if not row["check_range"]:              # check_range가 False인 행은 건너뜀
+        continue
 
-out_path.write_text(
-    json.dumps(records, ensure_ascii=False, indent=2),
-    encoding="utf-8"
-)
+    key = (row["range_min"], row["range_max"])
 
-print("saved:", out_path)
+    if key not in range_map:            # key가 없으면 새 리스트 생성
+        range_map[key] = []
+
+    range_map[key].append(str(row["문항"])) # 문항을 문자열로 변환하여 추가
+
+rule_culumns = []
 
 
+##########################
+# 컬럼갑 생성
+##########################
 
-# 검증 항목별 문항 리스트 생성
-missing_items = codebook_df.loc[codebook_df["check_missing"], "문항"].tolist()
-multiple_items = codebook_df.loc[codebook_df["check_multi"], "문항"].tolist()
-range_items = codebook_df.loc[codebook_df["check_range"], "문항"].tolist()
-
-# 검증 요약 데이터프레임 생성
-summary_df = pd.DataFrame({
-    "결측": [",".join(missing_items)],
-    "중복응답": [",".join(multiple_items)],
-    "범위": [",".join(range_items)]
+# 결측 컬럼값 생성
+missing_items = codebook_df.loc[codebook_df["check_missing"], "문항"].astype(str).tolist()
+rule_culumns.append({
+    "title": "결측",
+    "items": ", ".join(missing_items),
+    "values": ""
 })
 
+# 중복응답 컬럼값 생성
+multiple_items = codebook_df.loc[codebook_df["check_multi"], "문항"].astype(str).tolist()
+rule_culumns.append({
+    "title": "중복응답",
+    "items": ", ".join(multiple_items),
+    "values": ""
+})
 
-# range 그룹 만들기 (min,max별로 같은 범위조건 문항 묶기)
-g = (codebook_df.loc[codebook_df["check_range"], ["문항", "range_min", "range_max"]]    # codebook_df["check_range"] == True인 행 필터링
-    .groupby(["range_min", "range_max"])["문항"]                                        # 'range_min', 'range_max' 컬럼으로 그룹화   ex) (1,5)그룹["A1", "A2"], (10,20)그룹["B1", "B2"]
-    .apply(lambda s: ", ".join(s))                                                      # 그룹별 '문항'들을 쉼표로 연결된 문자열로 변환 ex) (1,5)그룹 "A1, A2", (10,20)그룹 "B1, B2"
-    .reset_index(name="items"))                                                         # 인덱스를 초기화하고 'items'라는 이름의 컬럼으로 결과 저장
-print("범위 그룹화 결과:\n", g)
-
-# dict 하나 = 엑셀 한컬럼 형태로 넣을 수 있게 튜플형으로 변경
-range_columns = [{
+# 범위 컬럼값 생성
+for (range_min, range_max), range_items in range_map.items():  # range_map의 각 (min,max)키와 해당 문항 리스트를 순회
+    rule_culumns.append({
         "title": "범위",
-        "items": r.items,
-        "values": f"{int(r.range_min)}, {int(r.range_max)}"}
-    for r in g.itertuples(index=False)              # itertuples : DataFrame의 각 행을 튜플로 반환
-]
-
-print("범위 컬럼들:\n", range_columns)
-
-columns = [
-    {"title": "결측", "items": ",".join(missing_items), "values": ""},
-    {"title": "중복 응답", "items": ",".join(multiple_items), "values": ""},
-] + range_columns
+        "items": ", ".join(range_items),
+        "values": f"{int(range_min)}, {int(range_max)}"
+    })
 
 
-out = export_cart_xlsx(
-    columns=columns,
-    out_path="data/validation_cart.xlsx",
-    start_col=1,  # A부터
-)
-print("saved:", out)
+###############################
+# 출력용 데이터프레임 생성
+###############################
+
+df = pd.DataFrame(rule_culumns)
+
+# 엑셀로 저장(INDEX, HEADER 없음, 행열 반전)
+df.transpose().to_excel("data/validation_cart.xlsx", index=False, header=False)
