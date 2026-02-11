@@ -1,0 +1,154 @@
+{
+  "columns": [
+    {
+      "title": "스킵",
+      "groups": [
+        {
+          "items": [
+            "Q2-1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q2-1",
+            "value": [
+              "② 아니오"
+            ],
+            "end_col": "A7"
+          }
+        },
+        {
+          "items": [
+            "Q8"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q8",
+            "value": [
+              "② 아니오"
+            ],
+            "end_col": "A"
+          }
+        },
+        {
+          "items": [
+            "Q9-1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q9-1",
+            "value": [
+              "② 아니오"
+            ],
+            "end_col": "A"
+          }
+        },
+        {
+          "items": [
+            "A4"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A4",
+            "value": [
+              "① 전혀 아니다",
+              "② 아니다"
+            ],
+            "end_col": "A4-1"
+          }
+        },
+        {
+          "items": [
+            "A4"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A4",
+            "value": [
+              "③ 보통이다"
+            ],
+            "end_col": "A5"
+          }
+        },
+        {
+          "items": [
+            "A7"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A7",
+            "value": [
+              "② 없다"
+            ],
+            "end_col": "A8"
+          }
+        },
+        {
+          "items": [
+            "A23"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A23",
+            "value": [
+              "② 없음"
+            ],
+            "end_col": "A24"
+          }
+        },
+        {
+          "items": [
+            "A24"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A24",
+            "value": [
+              "② 없음"
+            ],
+            "end_col": "B"
+          }
+        },
+        {
+          "items": [
+            "A40"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "A40",
+            "value": [
+              "② 없음"
+            ],
+            "end_col": "A42"
+          }
+        },
+        {
+          "items": [
+            "C4"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "C4",
+            "value": [
+              "① 매우 불안하다",
+              "② 약간 불안하다"
+            ],
+            "end_col": "C4-1"
+          }
+        },
+        {
+          "items": [
+            "C18"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "C18",
+            "value": [
+              "② 없음"
+            ],
+            "end_col": "C19"
+          }
+        }
+      ]
+    }
+  ]
+}
