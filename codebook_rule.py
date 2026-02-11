@@ -18,23 +18,13 @@ print(codebook_df.head())
 # 응답 문자열에서 선택지 코드 추출 함수
 def parse_codes(options_text: str) -> list[int]:
     """
-    코드북의 '응답' 문자열에서 선택지 코드를 추출한다.
-
-    매개변수:
-        응답 (str): 코드북의 '응답' 컬럼 문자열.
-                   예: "1: 남자\\n2: 여자\\n3: 기타"
-
-    반환값:
-        list[int]:
-            - 형식이 올바른 경우: 추출된 정수 코드들의 리스트   예: [1, 2, 3]
-            - 형식이 올바르지 않은 경우: 빈 리스트 []          (범위 검증 대상 아님을 의미)
-            
-    내부 변수
-        line (str): 줄 단위로 분리된 응답 문자열의 한 행.
-        colon_index (int): line 문자열에서 첫 번째 ':' 문자가 등장하는 위치(index).
-        code_str (str): line에서 ':' 이전 부분을 잘라낸 문자열.
-        code_values (list[int]): 형식 검증을 통과한 정수 코드들을 누적 저장하는 리스트.
+    응답 문자열에서 선택지 코드를 추출하는 함수
+    Args:
+        options_text (str): 응답 문자열 (예: "1: 남자\n2: 여자\n3: 기타")`
+    Returns:
+        list[int]: 추출된 선택지 코드 리스트
     """
+    
     codes = []
     for raw in options_text.splitlines():  # 문자열을 줄단위로 쪼개기 ex)["1: 남자", "2: 여자", "3: 기타"]
         line = raw.strip()  # 앞뒤 공백 제거
