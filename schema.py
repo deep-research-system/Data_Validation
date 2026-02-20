@@ -6,35 +6,26 @@ from enum import Enum
 
 
 class ColumnTitle(str, Enum):
-    결측 = "결측"
-    중복응답 = "중복응답"
-    범위 = "범위"
+    """
+    설문지에서 스킵 로직이 걸리는 문항의 컬럼 제목.
+    """
     스킵 = "스킵"
     
 # ----------------------------
 # Rule 정의
 # ----------------------------
 
-class EmptyRule(BaseModel):
-    type: Literal["empty"] = "empty"
-    kind: Literal["결측", "중복응답"]
-    pass
-
-
-class RangeRule(BaseModel):
-    type: Literal["range"] = "range"
-    range_min: int
-    range_max: int
-
-
 class SkipRule(BaseModel):
+    """
+    스킵 로직(조건부 문항 이동) 규칙.
+    """
     type: Literal["skip"] = "skip"
     start_col: str
     value: List[Union[int, str]]    
     end_col: str
 
 
-RuleType = Union[EmptyRule, RangeRule, SkipRule]
+RuleType = Union[SkipRule]
 
 
 # ----------------------------
@@ -44,14 +35,16 @@ RuleType = Union[EmptyRule, RangeRule, SkipRule]
     
     
 class RuleGroup(BaseModel):
+    """
+    스킵 로직이 동일한 문항 그룹
+    """
     items: List[str]
     rule: RuleType
 
 
-class Column(BaseModel):
-    title: ColumnTitle
-    groups: List[RuleGroup] = Field(default_factory=list)  # default_factory=list : groups 필드가 제공되지 않거나 None인 경우 빈 리스트로 초기화
-
-
 class ValidationSchema(BaseModel):
-    columns: List[Column] = Field(default_factory=list)
+    """
+    설문지의 스킵 로직 전체 구조
+    """
+    type: ColumnTitle = Field(description="반드시 \"스킵\" 중 하나")
+    groups: List[RuleGroup] = Field(default_factory=list)  # default_factory=list : groups 필드가 제공되지 않거나 None인 경우 빈 리스트로 초기화

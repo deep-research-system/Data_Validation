@@ -1,0 +1,87 @@
+{
+  "columns": [
+    {
+      "title": "스킵",
+      "groups": [
+        {
+          "items": [
+            "2-7-1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "2-7-1",
+            "value": [
+              "③ 부담하지 않음"
+            ],
+            "end_col": "문3"
+          }
+        },
+        {
+          "items": [
+            "문4"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문4",
+            "value": [
+              "③ 모른다"
+            ],
+            "end_col": "문5"
+          }
+        },
+        {
+          "items": [
+            "문8"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문8",
+            "value": [
+              "② 아니오"
+            ],
+            "end_col": "문8-2"
+          }
+        },
+        {
+          "items": [
+            "문9"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문9",
+            "value": [
+              "② 아니오"
+            ],
+            "end_col": "문9-2"
+          }
+        },
+        {
+          "items": [
+            "문10"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문10",
+            "value": [
+              "② 없다"
+            ],
+            "end_col": "문11"
+          }
+        },
+        {
+          "items": [
+            "문11"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문11",
+            "value": [
+              "② 필요하지 않다"
+            ],
+            "end_col": "문12"
+          }
+        }
+      ]
+    }
+  ]
+}

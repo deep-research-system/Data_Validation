@@ -1,0 +1,96 @@
+{
+  "title": "스킵",
+  "groups": [
+    {
+      "items": [
+        "B1"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "B1",
+        "value": [
+          "① AX와 DX 모두 적용하고 있음"
+        ],
+        "end_col": "C1"
+      }
+    },
+    {
+      "items": [
+        "B1"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "B1",
+        "value": [
+          "② AX만 적용하고 있음"
+        ],
+        "end_col": "B2"
+      }
+    },
+    {
+      "items": [
+        "B1"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "B1",
+        "value": [
+          "③ DX만 적용하고 있음"
+        ],
+        "end_col": "B2"
+      }
+    },
+    {
+      "items": [
+        "C2"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "C2",
+        "value": [
+          "① 현재 받고 있음"
+        ],
+        "end_col": "C2-1"
+      }
+    },
+    {
+      "items": [
+        "C2"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "C2",
+        "value": [
+          "② 현재는 받고 있지 않음"
+        ],
+        "end_col": "C2-3"
+      }
+    },
+    {
+      "items": [
+        "C3"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "C3",
+        "value": [
+          "① 의향 있음"
+        ],
+        "end_col": "C3-1"
+      }
+    },
+    {
+      "items": [
+        "C3"
+      ],
+      "rule": {
+        "type": "skip",
+        "start_col": "C3",
+        "value": [
+          "② 의향 없음"
+        ],
+        "end_col": "C3-2"
+      }
+    }
+  ]
+}

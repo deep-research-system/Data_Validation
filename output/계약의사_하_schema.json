@@ -1,0 +1,130 @@
+{
+  "columns": [
+    {
+      "title": "스킵",
+      "groups": [
+        {
+          "items": [
+            "문5-3"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문5-3",
+            "value": [
+              "예"
+            ],
+            "end_col": "문5-3-1"
+          }
+        },
+        {
+          "items": [
+            "문5-3"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문5-3",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "문6"
+          }
+        },
+        {
+          "items": [
+            "문13"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문13",
+            "value": [
+              "있다"
+            ],
+            "end_col": "문13-1"
+          }
+        },
+        {
+          "items": [
+            "문13"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문13",
+            "value": [
+              "없다"
+            ],
+            "end_col": "문14"
+          }
+        },
+        {
+          "items": [
+            "문15"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문15",
+            "value": [
+              "있다"
+            ],
+            "end_col": "문15-1"
+          }
+        },
+        {
+          "items": [
+            "문16"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문16",
+            "value": [
+              "필요하다"
+            ],
+            "end_col": "문16-1"
+          }
+        },
+        {
+          "items": [
+            "문16"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문16",
+            "value": [
+              "필요하지 않다",
+              "모르겠다"
+            ],
+            "end_col": "문17"
+          }
+        },
+        {
+          "items": [
+            "문17"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문17",
+            "value": [
+              "전혀 필요하지 않음",
+              "필요하지 않음",
+              "보통"
+            ],
+            "end_col": "문17-2"
+          }
+        },
+        {
+          "items": [
+            "문17"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "문17",
+            "value": [
+              "필요함",
+              "매우 필요함"
+            ],
+            "end_col": "문17-1"
+          }
+        }
+      ]
+    }
+  ]
+}

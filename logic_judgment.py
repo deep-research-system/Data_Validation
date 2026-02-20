@@ -16,7 +16,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 # PDF에서 추출한 텍스트 불러오기
-text = Path("output/questions.v2.json").read_text(encoding="utf-8")
+text = Path("output/요양시설_중상.txt").read_text(encoding="utf-8")
 
 # ----- (2) 파서 준비 -----
 parser = PydanticOutputParser(pydantic_object=ValidationSchema)
@@ -61,7 +61,7 @@ except OutputParserException as e:
 
 print(json.dumps(schema_obj.model_dump(), indent=2, ensure_ascii=False))
 
-Path("schema.json").write_text(
+Path("output/요양시설_중상_schema.json").write_text(
     json.dumps(schema_obj.model_dump(), indent=2, ensure_ascii=False),
     encoding="utf-8"
 )

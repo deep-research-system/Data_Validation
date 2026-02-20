@@ -1,0 +1,295 @@
+{
+  "columns": [
+    {
+      "title": "스킵",
+      "groups": [
+        {
+          "items": [
+            "SQ1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "SQ1",
+            "value": [
+              "취업 중"
+            ],
+            "end_col": "Q1"
+          }
+        },
+        {
+          "items": [
+            "SQ1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "SQ1",
+            "value": [
+              "미취업 중"
+            ],
+            "end_col": "Q12"
+          }
+        },
+        {
+          "items": [
+            "Q12_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q12_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q12_2"
+          }
+        },
+        {
+          "items": [
+            "Q12_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q12_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q13"
+          }
+        },
+        {
+          "items": [
+            "Q13_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q13_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q13_2"
+          }
+        },
+        {
+          "items": [
+            "Q13_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q13_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q14"
+          }
+        },
+        {
+          "items": [
+            "Q14_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q14_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q14_2"
+          }
+        },
+        {
+          "items": [
+            "Q14_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q14_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q15"
+          }
+        },
+        {
+          "items": [
+            "Q15_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q15_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q15_2"
+          }
+        },
+        {
+          "items": [
+            "Q15_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q15_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q16"
+          }
+        },
+        {
+          "items": [
+            "Q16_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q16_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q16_2"
+          }
+        },
+        {
+          "items": [
+            "Q16_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q16_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q17"
+          }
+        },
+        {
+          "items": [
+            "Q17_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q17_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q17_2"
+          }
+        },
+        {
+          "items": [
+            "Q17_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q17_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q18"
+          }
+        },
+        {
+          "items": [
+            "Q18_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q18_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q18_2"
+          }
+        },
+        {
+          "items": [
+            "Q18_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q18_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q19"
+          }
+        },
+        {
+          "items": [
+            "Q19_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q19_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q19_2"
+          }
+        },
+        {
+          "items": [
+            "Q19_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q19_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q20"
+          }
+        },
+        {
+          "items": [
+            "Q20_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q20_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q20_2"
+          }
+        },
+        {
+          "items": [
+            "Q20_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q20_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q21"
+          }
+        },
+        {
+          "items": [
+            "Q21_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q21_1",
+            "value": [
+              "예"
+            ],
+            "end_col": "Q21_2"
+          }
+        },
+        {
+          "items": [
+            "Q21_1"
+          ],
+          "rule": {
+            "type": "skip",
+            "start_col": "Q21_1",
+            "value": [
+              "아니오"
+            ],
+            "end_col": "Q22"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,6 @@
 import pdfplumber
 from pathlib import Path
-import win32com.client
 
-# 텍스트 추출은 제일잘하나 표 글자가 뒤죽박죽으로 나옴
 # 빠름
 
 def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
@@ -21,8 +19,8 @@ def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
 
 if __name__ == "__main__":
     txt_path = extract_text_from_pdf(
-        pdf_path="data/(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.pdf",
-        out_txt="output/pdf_text(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.txt"
+        pdf_path="data/한국생산기술연구원_중.pdf",
+        out_txt="output/한국생산기술연구원_중.txt"
     )
 
     print(f"텍스트 추출 완료: {txt_path}")
