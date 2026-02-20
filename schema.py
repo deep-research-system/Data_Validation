@@ -23,7 +23,7 @@ class SkipRule(BaseModel):
     start_col: str
     value: List[Union[int, str]]    
     end_col: str
-
+    note: str = Field(default="", description="로직 판단 이유 설명")
 
 RuleType = Union[SkipRule]
 
