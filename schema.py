@@ -50,7 +50,7 @@ class RuleGroup(BaseModel):
 
 class Column(BaseModel):
     title: ColumnTitle
-    groups: List[RuleGroup] = Field(default_factory=list)
+    groups: List[RuleGroup] = Field(default_factory=list)  # default_factory=list : groups 필드가 제공되지 않거나 None인 경우 빈 리스트로 초기화
 
 
 class ValidationSchema(BaseModel):

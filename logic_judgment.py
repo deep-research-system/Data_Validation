@@ -16,7 +16,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 # PDF에서 추출한 텍스트 불러오기
-text = Path("output/pdf_text(STI)_(설문지)_부산연구원_2025년 부산 청년패널조사_250623_상.txt").read_text(encoding="utf-8")
+text = Path("output/questions.v2.json").read_text(encoding="utf-8")
 
 # ----- (2) 파서 준비 -----
 parser = PydanticOutputParser(pydantic_object=ValidationSchema)
