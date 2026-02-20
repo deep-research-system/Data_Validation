@@ -1,7 +1,4 @@
-import json
 import pandas as pd
-from utils.excel_save  import export_cart_xlsx
-from pathlib import Path
 
 
 # 파일 불러오기 및 전처리
@@ -131,4 +128,4 @@ for (range_min, range_max), range_items in range_map.items():  # range_map의 �
 df = pd.DataFrame(rule_culumns)
 
 # 엑셀로 저장(INDEX, HEADER 없음, 행열 반전)
-df.transpose().to_excel("data/validation_cart.xlsx", index=False, header=False)
+df.transpose().to_excel("output/validation_cart.xlsx", index=False, header=False)
