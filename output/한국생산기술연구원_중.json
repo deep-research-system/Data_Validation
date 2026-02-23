@@ -1,0 +1,99 @@
+{
+  "groups": [
+    {
+      "start_col": "B1",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "B1",
+          "value": [
+            "1"
+          ],
+          "raw": "☞ (B1-1, B1-2 응답 후 C1으로 이동",
+          "note": "",
+          "end_col": "C1"
+        },
+        {
+          "type": "skip",
+          "start_col": "B1",
+          "value": [
+            "2"
+          ],
+          "raw": "☞ (B1-1만 응답 후 B2로 이동",
+          "note": "",
+          "end_col": "B2"
+        },
+        {
+          "type": "skip",
+          "start_col": "B1",
+          "value": [
+            "3"
+          ],
+          "raw": "☞ (B1-2만 응답 후 B2로 이동",
+          "note": "",
+          "end_col": "B2"
+        },
+        {
+          "type": "skip",
+          "start_col": "B1",
+          "value": [
+            "4"
+          ],
+          "raw": "☞ (B1-3만 응답 후 B2로 이동",
+          "note": "",
+          "end_col": "B2"
+        }
+      ]
+    },
+    {
+      "start_col": "C2",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "C2",
+          "value": [
+            "1"
+          ],
+          "raw": "☞ (C2-1로 이동",
+          "note": "",
+          "end_col": "C2-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "C2",
+          "value": [
+            "2"
+          ],
+          "raw": "☞ (C2-3으로 이동",
+          "note": "",
+          "end_col": "C2-3"
+        }
+      ]
+    },
+    {
+      "start_col": "C3",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "C3",
+          "value": [
+            "1"
+          ],
+          "raw": "☞ (C3-1 응답 후 C4로 이동",
+          "note": "",
+          "end_col": "C3-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "C3",
+          "value": [
+            "2"
+          ],
+          "raw": "☞ (C3-2로 이동",
+          "note": "",
+          "end_col": "C3-2"
+        }
+      ]
+    }
+  ]
+}

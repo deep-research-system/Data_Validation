@@ -1,0 +1,278 @@
+{
+  "groups": [
+    {
+      "start_col": "문1-1",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문1-1",
+          "value": [
+            "1",
+            "2"
+          ],
+          "raw": "1-2. 입소 어르신의 연령 만 세 ☞ 19 년 生",
+          "note": "",
+          "end_col": "문1-2"
+        }
+      ]
+    },
+    {
+      "start_col": "문1-8",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문1-8",
+          "value": [
+            "1"
+          ],
+          "raw": "① 있음 ☞ 남 녀",
+          "note": "",
+          "end_col": "문1-9"
+        },
+        {
+          "type": "skip",
+          "start_col": "문1-8",
+          "value": [
+            "2"
+          ],
+          "raw": "② 없음",
+          "note": "",
+          "end_col": "문1-9"
+        }
+      ]
+    },
+    {
+      "start_col": "문2-7-1",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문2-7-1",
+          "value": [
+            "1",
+            "2"
+          ],
+          "raw": "① 전부 부담함(문 2-7-2 이동) ② 일부 부담함(문 2-7-2 이동)",
+          "note": "",
+          "end_col": "문2-7-2"
+        },
+        {
+          "type": "skip",
+          "start_col": "문2-7-1",
+          "value": [
+            "3"
+          ],
+          "raw": "③ 부담하지 않음(문 3 이동)",
+          "note": "",
+          "end_col": "문3"
+        }
+      ]
+    },
+    {
+      "start_col": "문3-2",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문3-2",
+          "value": [
+            "1"
+          ],
+          "raw": "① 이용 함 ☞ 1)-1로 이동",
+          "note": "",
+          "end_col": "문3-2-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문3-2",
+          "value": [
+            "2"
+          ],
+          "raw": "② 이용하지 않음 ☞ 2)로 이동",
+          "note": "",
+          "end_col": "문3-3"
+        }
+      ]
+    },
+    {
+      "start_col": "문4",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문4",
+          "value": [
+            "1",
+            "2"
+          ],
+          "raw": "① 잘 알고 있다 ☞ 문4-1로 이동 ② 들어 본 적 있다 ☞ 문4-1로 이동",
+          "note": "",
+          "end_col": "문4-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문4",
+          "value": [
+            "3"
+          ],
+          "raw": "③ 모른다 ☞ 문5로 이동",
+          "note": "",
+          "end_col": "문5"
+        }
+      ]
+    },
+    {
+      "start_col": "문4-1",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문4-1",
+          "value": [
+            "1"
+          ],
+          "raw": "① 예 ☞ 문4-1-1로 이동",
+          "note": "",
+          "end_col": "문4-1-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문4-1",
+          "value": [
+            "2",
+            "3"
+          ],
+          "raw": "② 아니오 ☞ 문4-2로 이동 ③ 모른다 ☞ 문4-2로 이동",
+          "note": "",
+          "end_col": "문4-2"
+        }
+      ]
+    },
+    {
+      "start_col": "문7",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문7",
+          "value": [
+            "1"
+          ],
+          "raw": "① 노인요양시설 ☞ 문7-1로 이동",
+          "note": "",
+          "end_col": "문7-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문7",
+          "value": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "raw": "② 어르신 본인의 집 ③ 어르신 자녀(아들․딸)의 집 ④ 병원 ⑤ 호스피스 시설 ⑥ 기타 (",
+          "note": "",
+          "end_col": "문8"
+        }
+      ]
+    },
+    {
+      "start_col": "문8",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문8",
+          "value": [
+            "1"
+          ],
+          "raw": "① 예 ☞ 문8-1로 이동",
+          "note": "",
+          "end_col": "문8-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문8",
+          "value": [
+            "2"
+          ],
+          "raw": "② 아니오 ☞ 문8-2로 이동",
+          "note": "",
+          "end_col": "문8-2"
+        }
+      ]
+    },
+    {
+      "start_col": "문9",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문9",
+          "value": [
+            "1"
+          ],
+          "raw": "① 예 ☞ 문9-1로 이동",
+          "note": "",
+          "end_col": "문9-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문9",
+          "value": [
+            "2"
+          ],
+          "raw": "② 아니오 ☞ 문9-2로 이동",
+          "note": "",
+          "end_col": "문9-2"
+        }
+      ]
+    },
+    {
+      "start_col": "문10",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문10",
+          "value": [
+            "1"
+          ],
+          "raw": "① 있다 ☞ 문10-1로 이동",
+          "note": "",
+          "end_col": "문10-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문10",
+          "value": [
+            "2"
+          ],
+          "raw": "② 없다 ☞ 문11로 이동",
+          "note": "",
+          "end_col": "문11"
+        }
+      ]
+    },
+    {
+      "start_col": "문11",
+      "rules": [
+        {
+          "type": "skip",
+          "start_col": "문11",
+          "value": [
+            "1"
+          ],
+          "raw": "① 필요하다 ☞ 문11-1로 이동",
+          "note": "",
+          "end_col": "문11-1"
+        },
+        {
+          "type": "skip",
+          "start_col": "문11",
+          "value": [
+            "2",
+            "3"
+          ],
+          "raw": "② 필요하지 않다 ☞ 문12로 이동 ③ 모르겠다 ☞ 문12로 이동",
+          "note": "",
+          "end_col": "문12"
+        }
+      ]
+    }
+  ]
+}
