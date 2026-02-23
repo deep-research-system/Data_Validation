@@ -1,92 +1,75 @@
 from __future__ import annotations
 
-from typing import List, Union, Literal
-from pydantic import BaseModel, Field
 from enum import Enum
+from typing import List, Union, Literal, Optional
+from pydantic import BaseModel, Field
 
 
+# ----------------------------
+# 공통 타입
+# ----------------------------
+AnswerValue = Union[int, str]
 
 
-
-#---------------------------------
-
-# 로직 근거 추출 스키마
-#---------------------------------
-class EvidenceItem(BaseModel):
-    """
-    1단계: '근거(raw)'만 뽑아내는 구조.
-    - raw는 설문지에 적힌 지시문을 그대로 복사해야 함
-    - end_col/mid_col 같은 최종 필드는 여기서 만들지 않음
-    """
-    start_col: str
-    value: List[Union[int, str]]
-    raw: str
-    kind_hint: Literal["skip", "branch"] = Field(
-        description='raw에 "응답 후" 또는 "~만 응답"이 있으면 branch, 아니면 skip'
-    )
+class RuleKind(str, Enum):
+    skip = "skip"
+    branch_skip = "branch_skip"
 
 
-class EvidenceList(BaseModel):
-    items: List[EvidenceItem] = Field(default_factory=list)
-    
-#---------------------------------
-# 로직 판단 스키마
-#---------------------------------
-
-class ColumnTitle(str, Enum):
-    """
-    설문지에서 스킵 로직이 걸리는 문항의 컬럼 제목.
-    """
-    스킵 = "스킵"
-    브랜치스킵 = "브랜치스킵"
-    
 # ----------------------------
 # Rule 정의
 # ----------------------------
-
-class SkipRule(BaseModel):
+class BaseRule(BaseModel):
     """
-    스킵 로직(조건부 문항 이동) 규칙.
+    모든 로직 규칙의 공통 필드
     """
-    type: Literal["skip"] = "skip"
+    type: RuleKind
     start_col: str
-    value: List[Union[int, str]]    
-    end_col: str
-    note: str = Field(default="", description="로직 판단 이유 설명")
+    value: List[AnswerValue] = Field(default_factory=list)
 
-class branch_skip_rule(BaseModel):
+    # 근거(원문 지시문)
+    raw: Optional[str] = Field(default=None, description="설문지에 적힌 지시문 원문(가능하면 그대로)")
+    note: str = Field(default="", description="로직 판단 이유/보완 설명")
+
+
+class SkipRule(BaseRule):
     """
-    조건 충족 시 중간에 응답해야할 문항 거친뒤 최종 이동하는 규칙.
+    조건 충족 시 특정 문항으로 즉시 이동
+    예) (문3-1) ② 없음 ☞ 3-2로 이동
     """
-    type: Literal["branch_skip"] = "branch_skip"
-    start_col: str
-    value: List[Union[int, str]]
-    mid_col: str
+    type: Literal[RuleKind.skip] = RuleKind.skip
     end_col: str
-    note: str = Field(default="", description="로직 판단 이유 설명")
 
 
+# class BranchSkipRule(BaseRule):
+#     """
+#     조건 충족 시 '중간 문항군'을 거친 뒤 '최종 이동 지점'으로 이어지는 로직.
+#     - mid_col: 중간에 '응답해야 하는 시작 문항'(또는 첫 문항)
+#     - end_col: 중간 구간 종료 후 이어지는 최종 문항
+#     예) (문14) ① 예 ☞ 문14-1~14-3 응답 후 다음 섹션(문15)로 진행
+#         -> mid_col="문14-1", end_col="문15"
+#     """
+#     type: Literal[RuleKind.branch_skip] = RuleKind.branch_skip
+#     mid_col: str
+#     end_col: str
 
-RuleType = Union[SkipRule, branch_skip_rule]
+
+RuleType = Union[SkipRule]
 
 
 # ----------------------------
 # Group 구조
 # ----------------------------
-
-    
-    
 class RuleGroup(BaseModel):
     """
-    스킵 로직이 동일한 문항 그룹
+    start_col(출발 문항) 기준으로 규칙 묶음
     """
     start_col: str
-    rule: List[RuleType] = Field(default_factory=list)
+    rules: List[RuleType] = Field(default_factory=list)
 
 
 class ValidationSchema(BaseModel):
     """
-    설문지의 스킵 로직 전체 구조
+    설문지 전체 로직 구조
     """
-    type: ColumnTitle = Field(description="반드시 '스킵' 또는 '브랜치스킵' 중 하나")
-    groups: List[RuleGroup] = Field(default_factory=list)  # default_factory=list : groups 필드가 제공되지 않거나 None인 경우 빈 리스트로 초기화
+    groups: List[RuleGroup] = Field(default_factory=list)
