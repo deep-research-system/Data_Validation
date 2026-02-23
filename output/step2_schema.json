@@ -1,0 +1,131 @@
+{
+  "type": "스킵",
+  "groups": [
+    {
+      "start_col": "문3-1",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문3-1",
+          "value": [
+            1
+          ],
+          "end_col": "3-1-1",
+          "note": "이동 대상 문항ID: 3-1-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문3-2",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문3-2",
+          "value": [
+            1
+          ],
+          "end_col": "3-2-1",
+          "note": "이동 대상 문항ID: 3-2-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문4-1",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문4-1",
+          "value": [
+            1
+          ],
+          "end_col": "문4-2",
+          "note": "이동 대상 문항ID: 문4-2"
+        }
+      ]
+    },
+    {
+      "start_col": "문4-2",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문4-2",
+          "value": [
+            1
+          ],
+          "end_col": "문4-3",
+          "note": "이동 대상 문항ID: 문4-3"
+        }
+      ]
+    },
+    {
+      "start_col": "문7",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문7",
+          "value": [
+            1
+          ],
+          "end_col": "문7-1",
+          "note": "이동 대상 문항ID: 문7-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문8",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문8",
+          "value": [
+            1
+          ],
+          "end_col": "문8-1",
+          "note": "이동 대상 문항ID: 문8-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문12",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문12",
+          "value": [
+            1
+          ],
+          "end_col": "문12-1",
+          "note": "이동 대상 문항ID: 문12-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문13",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문13",
+          "value": [
+            1
+          ],
+          "end_col": "문13-1",
+          "note": "이동 대상 문항ID: 문13-1"
+        }
+      ]
+    },
+    {
+      "start_col": "문14",
+      "rule": [
+        {
+          "type": "skip",
+          "start_col": "문14",
+          "value": [
+            1
+          ],
+          "end_col": "문14-1",
+          "note": "이동 대상 문항ID: 문14-1"
+        }
+      ]
+    }
+  ]
+}
