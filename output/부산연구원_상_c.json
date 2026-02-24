@@ -1,0 +1,1054 @@
+{
+  "items": [
+    {
+      "type": "candidate",
+      "page": 2,
+      "line_no": 25,
+      "start_hint": "Q2-1.",
+      "raw": "② 아니오 (⇒ A7. 응답 후 A39. 이동)",
+      "context_prev": "① 예 ② 아니오",
+      "context_next": "Q3. 출생 연도 ( )년",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 2,
+      "line_no": 38,
+      "start_hint": "Q8.",
+      "raw": "① 예 ② 아니오 (⇒ A로 이동)",
+      "context_prev": "② 아니오",
+      "context_next": "① 재학",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 3,
+      "line_no": 3,
+      "start_hint": "Q9-1.",
+      "raw": "③ 예 ② 아니오 (⇒ A로 이동)",
+      "context_prev": "② 아니오",
+      "context_next": "한 고등교육기관이 있습니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 3,
+      "line_no": 27,
+      "start_hint": "Q9-4.",
+      "raw": "(Q9-4 ④, ⑤, ⑥ 응답자만)",
+      "context_prev": "졸업/중퇴/수료 연도 ① 2024년 ② 2025년",
+      "context_next": "",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 5,
+      "line_no": 3,
+      "start_hint": "A4.",
+      "raw": "(⇒ A4-1. 이동) (⇒ A4-1. 이동) (⇒ A5. 이동) (⇒ A4-2. 이동) (⇒ A4-2. 이동)",
+      "context_prev": "② 아니다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다",
+      "context_next": "↳ A4-1. (①과 ②를 선택한 경우만 응답)중소기업 취업을 원하지 않는 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 5,
+      "line_no": 4,
+      "start_hint": "A4-1.",
+      "raw": "↳ A4-1. (①과 ②를 선택한 경우만 응답)중소기업 취업을 원하지 않는 이유는 무엇입니까?",
+      "context_prev": "(⇒ A4-1. 이동) (⇒ A4-1. 이동) (⇒ A5. 이동) (⇒ A4-2. 이동) (⇒ A4-2. 이동)",
+      "context_next": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 5,
+      "line_no": 32,
+      "start_hint": "A7.",
+      "raw": "① 있다 (⇒ A7-1. 이동) ② 없다 (⇒ A8. 이동)",
+      "context_prev": "A6. 귀하는 향후 6개월 이내 취업이나 창업을 위해 직업교육을 받을 의사가 있으십니까?",
+      "context_next": "※ 근로장학생, 아르바이트, 현장실습생, 인턴, 프리랜서, 자영업, 가족의 소득활동을 위해 보수를 받지 않고 일하는 경우도 포함됩니다.",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 6,
+      "line_no": 1,
+      "start_hint": "A7-1.",
+      "raw": "↳ A7-1. (①을 선택한 경우만 응답) 지난 조사 이후, 일자리를 그만둔 이유는 무엇입니까?",
+      "context_prev": "",
+      "context_next": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 7,
+      "line_no": 3,
+      "start_hint": "",
+      "raw": "미취업자는 A39로 이동해 주시면 됩니다.",
+      "context_prev": "(Q2.에서 ① 직장인, ② 사업체(자영업) 운영, ③ 프리랜서 응답)",
+      "context_next": "A8. 현재 일하고 있는 사업장의 종사자는 총 몇 명입니까? (본인 포함)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 8,
+      "line_no": 2,
+      "start_hint": "A11.",
+      "raw": "② 없다 (⇒ A12. 이동)",
+      "context_prev": "[1] A11. 현재 주된 일자리 이외에 수입을 목적으로 일을 하는 직장(일자리)이 있습니까?",
+      "context_next": "[3] ↳ A11-1. (①을 선택한 경우만 응답) 주된 일자리 외 여러 일을 동시에 하는 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 8,
+      "line_no": 20,
+      "start_hint": "A12.",
+      "raw": "⑥ 고용원이 있는 자영업자 (고용주) (유급고용원을 채용해 자영업하는 고용주) (⇒ A25. 이동)",
+      "context_prev": "[19] 학습지 교사, 골프장 캐디, 보험설계사, 퀵서비스 배달원 등)",
+      "context_next": "[21] ⑦ 고용원이 없는 자영업자 (자영업자) (개인 프리랜서 포함) (⇒ A25. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 8,
+      "line_no": 21,
+      "start_hint": "A12.",
+      "raw": "⑦ 고용원이 없는 자영업자 (자영업자) (개인 프리랜서 포함) (⇒ A25. 이동)",
+      "context_prev": "[20] ⑥ 고용원이 있는 자영업자 (고용주) (유급고용원을 채용해 자영업하는 고용주) (⇒ A25. 이동)",
+      "context_next": "[22] ⑧ 무급가족종사자",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 9,
+      "line_no": 12,
+      "start_hint": "A14.",
+      "raw": "② 아니다 (이직) (⇒ A14-1. 이동)",
+      "context_prev": "A14. 지난 조사 시 일했던 일자리에서 여전히 재직 중이십니까?",
+      "context_next": "(※ 지난 조사 당시 ‘취업자’ 응답, 이후 ‘이직’한 사람만 응답)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 9,
+      "line_no": 14,
+      "start_hint": "A14-1.",
+      "raw": "↳ A14-1. (②를 선택한 경우만 응답) 일자리를 이직하게 된 이유는 무엇입니까? (⇒ 응답후 A16. 이동)",
+      "context_prev": "② 아니다 (이직) (⇒ A14-1. 이동)",
+      "context_next": "① 더 나은 보수/복지",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 10,
+      "line_no": 6,
+      "start_hint": "A16.",
+      "raw": "A16. 귀하의 현재 모든 일자리의 주당 노동시간은 어느 정도입니까? 주 시간",
+      "context_prev": "※ 만약 여러 가지 일을 동시에 하시는 경우 합산된 노동시간을 작성해 주세요.",
+      "context_next": "A17. 귀하가 희망하는 노동시간은 어느 정도입니까? 주 시간",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 10,
+      "line_no": 7,
+      "start_hint": "A17.",
+      "raw": "A17. 귀하가 희망하는 노동시간은 어느 정도입니까? 주 시간",
+      "context_prev": "A16. 귀하의 현재 모든 일자리의 주당 노동시간은 어느 정도입니까? 주 시간",
+      "context_next": "A18. 귀하가 현재 하고 있는 일을 통해 받고자 하는 희망 소득(월평균)은 얼마 정도 입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 10,
+      "line_no": 10,
+      "start_hint": "A19.",
+      "raw": "A19. 귀하가 현재 하고 있는 일의 업무내용과 수준이 귀하의 학력수준과 비교하면 어떻습니까?",
+      "context_prev": "A18. 귀하가 현재 하고 있는 일을 통해 받고자 하는 희망 소득(월평균)은 얼마 정도 입니까?",
+      "context_next": "① 일의 수준이 아주 낮다 ② 일의 수준이 낮다 ③ 유사하다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 10,
+      "line_no": 13,
+      "start_hint": "A20.",
+      "raw": "A20. 귀하가 현재 하고 있는 일의 업무내용과 수준이 귀하가 가진 기술수준(역량·능력)과 비교하면 어떻습니까?",
+      "context_prev": "A19. 귀하가 현재 하고 있는 일의 업무내용과 수준이 귀하의 학력수준과 비교하면 어떻습니까?",
+      "context_next": "① 일의 수준이 아주 낮다 ② 일의 수준이 낮다 ③ 유사하다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 10,
+      "line_no": 16,
+      "start_hint": "A21.",
+      "raw": "A21. 현재 하고 있는 일의 업무내용이 귀하의 전공과 일치하십니까?",
+      "context_prev": "A20. 귀하가 현재 하고 있는 일의 업무내용과 수준이 귀하가 가진 기술수준(역량·능력)과 비교하면 어떻습니까?",
+      "context_next": "① 전혀 아니다 ② 아니다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 11,
+      "line_no": 31,
+      "start_hint": "A23.",
+      "raw": "① 있음 (⇒ A23-1. 이동) ② 없음 (⇒ A24. 이동)",
+      "context_prev": "A23. 귀하는 향후 1년 이내에 이직할 의사가 있습니까?",
+      "context_next": "↳ A23-1. (①을 선택한 경우만 응답) 귀하가 이직을 희망하는 가장 주된 이유는 무엇입니까? (최대 2개까지 선택)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 11,
+      "line_no": 32,
+      "start_hint": "A23.",
+      "raw": "↳ A23-1. (①을 선택한 경우만 응답) 귀하가 이직을 희망하는 가장 주된 이유는 무엇입니까? (최대 2개까지 선택)",
+      "context_prev": "① 있음 (⇒ A23-1. 이동) ② 없음 (⇒ A24. 이동)",
+      "context_next": "① 더 나은 보수/복지",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 12,
+      "line_no": 3,
+      "start_hint": "A24.",
+      "raw": "③ ① 있음 (⇒ A24-1. 이동) ② 없음 (⇒ B.경제활동 이동)",
+      "context_prev": "A24. 귀하는 향후 1년 이내에 창업할 의사가 있으십니까?",
+      "context_next": "↳A24-1. (①을 선택한 경우만 응답) 창업을 하고자 하는 이유는 무엇입니까? (최대 2개까지 선택)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 12,
+      "line_no": 5,
+      "start_hint": "",
+      "raw": "(⇒ 응답 후 PART B.경제활동 이동)",
+      "context_prev": "④ 일하는 시간이 자유로운 편이어서",
+      "context_next": "① 장기적으로 임금노동자보다 소득이나 장래성이 더 나을 것 같아서",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 12,
+      "line_no": 19,
+      "start_hint": "A25.",
+      "raw": "② 아니다 (창업 또는 새 프로젝트) (⇒ A26. 이동)",
+      "context_prev": "① 그렇다 (동일 사업체 유지) (⇒ A32. 이동)",
+      "context_next": "A26. 창업(자영업)을 하게 된 주된 동기는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 13,
+      "line_no": 1,
+      "start_hint": "A28.",
+      "raw": "[1] A28. 귀하가 현재 사업체를 준비한 기간은 어느 정도입니까?",
+      "context_prev": "",
+      "context_next": "[2] ① 3개월 미만",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 13,
+      "line_no": 7,
+      "start_hint": "A29.",
+      "raw": "[7] A29. 귀하가 창업을 위해 지금까지 준비했던 사항을 모두 선택해 주십시오.",
+      "context_prev": "[6] ⑤ 2년 이상",
+      "context_next": "[8] ① 창업 관련 교육 이수 ② 사업 아이템 선정",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 14,
+      "line_no": 6,
+      "start_hint": "A31.",
+      "raw": "A31. 창업 시 초기 자본은 대략 얼마 정도 들었습니까? 약 억 만원 정도",
+      "context_prev": "A30. 창업 시 초기 자본을 조달한 방법을 모두 선택해 주십시오.",
+      "context_next": "A32. 귀하가 직접 일하는 시간은 얼마나 되십니까? 주 시간",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 14,
+      "line_no": 7,
+      "start_hint": "A32.",
+      "raw": "A32. 귀하가 직접 일하는 시간은 얼마나 되십니까? 주 시간",
+      "context_prev": "A31. 창업 시 초기 자본은 대략 얼마 정도 들었습니까? 약 억 만원 정도",
+      "context_next": "A33. 한 달에 평균 며칠 정도 쉬십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 14,
+      "line_no": 8,
+      "start_hint": "A33.",
+      "raw": "A33. 한 달에 평균 며칠 정도 쉬십니까?",
+      "context_prev": "A32. 귀하가 직접 일하는 시간은 얼마나 되십니까? 주 시간",
+      "context_next": "① 전혀 쉬지 못함 ② 한 달에 1~2일 ③ 한 달에 3~4일",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 14,
+      "line_no": 20,
+      "start_hint": "A35.",
+      "raw": "A35. 사업 운영을 어렵게 하는 원인은 무엇이라고 생각하십니까? (최대 2개까지 선택)",
+      "context_prev": "A34. 현재 하고 있는 일에 대한 귀하의 의견과 일치하는 문항에 체크해주세요.",
+      "context_next": "① 동종업계 소상공인이 너무 많아지기 때문에",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 15,
+      "line_no": 4,
+      "start_hint": "A36ⓐ.",
+      "raw": "① 지원받은 경험 없음 (⇒ A36-1. 이동)",
+      "context_prev": "A36ⓐ. 지난 조사 이후, 현재 하고 있는 사업을 시작하거나 운영하면서 지원 받은 정책을 모두 선택해 주십",
+      "context_next": "② 창업 교육(창업 강좌, 아카데미 등)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 15,
+      "line_no": 16,
+      "start_hint": "A36ⓑ.",
+      "raw": "① 지원받은 경험 없음 (⇒ A36-1. 이동)",
+      "context_prev": "A36ⓑ. 현재 하고 있는 사업을 시작하거나 운영하면서 지원 받은 정책을 모두 선택해 주십시오.",
+      "context_next": "② 창업 교육(창업 강좌, 아카데미 등)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 15,
+      "line_no": 26,
+      "start_hint": "",
+      "raw": "↳ A36-1. (A36ⓐ, ⓑ.에서 ①을 선택한 경우만 응답) 창업 지원을 받은 경험이 없는 주된 이유는 무엇입니",
+      "context_prev": "⑤ 원하는 지원 사업이 없어서",
+      "context_next": "까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 16,
+      "line_no": 3,
+      "start_hint": "A37.",
+      "raw": "(⇒ A38. 이동) (⇒ A38. 이동) (⇒ A38. 이동) (⇒ A37-1. 이동) (⇒ A37-1. 이동)",
+      "context_prev": "[2] ① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다",
+      "context_next": "[4] ↳ A37-1. (④와 ⑤를 선택한 경우만 응답) 업종전환이나 취업을 생각한 주된 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 16,
+      "line_no": 17,
+      "start_hint": "A38.",
+      "raw": "(⇒ 응답 후 PART B.경제활동 이동)",
+      "context_prev": "[16] A38. 청년 창업을 활성화하기 위해 가장 필요한 지원은 무엇이라고 생각하십니까?",
+      "context_next": "[18] ① 창업 관련 교육",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 17,
+      "line_no": 13,
+      "start_hint": "A40.",
+      "raw": "① 있음 (⇒ A40-1. 이동) ② 없음 (⇒ A42. 이동)",
+      "context_prev": "A40. 귀하는 (응답일 기준) 지난 1년 이내에 구직 경험이 있습니까? (아르바이트 구직활동 포함)",
+      "context_next": "↳ A40-1. (①을 선택한 경우만 응답) 귀하는 지난 4주간 구직활동 경험이 있습니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 17,
+      "line_no": 16,
+      "start_hint": "A41.",
+      "raw": "(⇒ A41. 이동) (⇒ A42. 이동)",
+      "context_prev": "② 없음 (구직단념 상태=비경제활동인구)",
+      "context_next": "A41. (A40. A40-1. ①을 선택한 경우만 응답) 귀하가 일자리(직장, 일거리)를 찾고 있는 주된 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 18,
+      "line_no": 2,
+      "start_hint": "A41-2.",
+      "raw": "(⇒ 응답 후 A43. 이동)",
+      "context_prev": "[1] ↳ A41-2. 귀하가 일자리(직장, 일거리)를 알아보는 방법은 무엇입니까? (최대 3개까지 선택)",
+      "context_next": "[3] ① 학교, 학원에서 제공하는 취업 정보를 통해",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 18,
+      "line_no": 24,
+      "start_hint": "A43.",
+      "raw": "② 없음 (⇒ B.경제활동으로 이동)",
+      "context_prev": "[23] A43. 귀하는 향후 1년 이내에 창업할 의사가 있으십니까?",
+      "context_next": "[25] ↳A43-1. (①을 선택한 경우만 응답) 창업을 하고자 하는 이유는 무엇입니까? (최대 2개까지 선택)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 19,
+      "line_no": 24,
+      "start_hint": "B1.",
+      "raw": "※ 다음 표는 주요 생활비 지출 항목입니다. 표의 내용을 참고하시어 B2~3. 문항에 응답 바랍니다.",
+      "context_prev": "B. 경제활동(소득, 자산, 부채, 생활비)",
+      "context_next": "구분 내용",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 20,
+      "line_no": 11,
+      "start_hint": "B5.",
+      "raw": "① 있음 (⇒ B5-1. 이동) ② 없음 (⇒ B6. 이동)",
+      "context_prev": "B5. 귀하는 지난 조사 이후, 생활비 부족을 경험하신 적이 있습니까?",
+      "context_next": "↳ B5-1. (①을 선택한 경우만 응답) 생활비가 부족한 경우 어떤 방식으로 해결하셨습니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 20,
+      "line_no": 12,
+      "start_hint": "B5-1.",
+      "raw": "↳ B5-1. (①을 선택한 경우만 응답) 생활비가 부족한 경우 어떤 방식으로 해결하셨습니까?",
+      "context_prev": "① 있음 (⇒ B5-1. 이동) ② 없음 (⇒ B6. 이동)",
+      "context_next": "(최대 2개까지 선택)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 20,
+      "line_no": 11,
+      "start_hint": "B6.",
+      "raw": "② 없음 (⇒ B6. 이동)",
+      "context_prev": "① 있음 (⇒ B5-1. 이동) ② 없음 (⇒ B6. 이동)",
+      "context_next": "B6. 지난 조사 이후 귀하는 아래 각 항목별로 연체 경험이 있으십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 21,
+      "line_no": 9,
+      "start_hint": "B8.",
+      "raw": "① 재테크 하지 않음 (⇒ B8-1. 이동)",
+      "context_prev": "① 없음 ② 1채 ③ 2채 ④ 3채 이상",
+      "context_next": "② 재테크를 하고 있음 (⇒ B8-2. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 21,
+      "line_no": 10,
+      "start_hint": "B8.",
+      "raw": "② 재테크를 하고 있음 (⇒ B8-2. 이동)",
+      "context_prev": "① 재테크 하지 않음 (⇒ B8-1. 이동)",
+      "context_next": "↳ B8-1. (①을 선택한 경우만 응답) 귀하가 재테크를 하지 않는 주된 이유는 무엇입니까? (⇒ 응답 후 B9. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 21,
+      "line_no": 11,
+      "start_hint": "B8-1.",
+      "raw": "↳ B8-1. (①을 선택한 경우만 응답) 귀하가 재테크를 하지 않는 주된 이유는 무엇입니까? (⇒ 응답 후 B9. 이동)",
+      "context_prev": "② 재테크를 하고 있음 (⇒ B8-2. 이동)",
+      "context_next": "① 하고 싶지만 여유자금이 없어서 ② 과거 재테크를 실패한 경험 때문에",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 21,
+      "line_no": 15,
+      "start_hint": "B8-2.",
+      "raw": "↳ B8-2. (②를 선택한 경우만 응답) 귀하가 재테크를 하는 이유는 무엇입니까? (최대 2개까지 선택)",
+      "context_prev": "③ 관심이 없어서 ④ 방법과 정보 등을 몰라서",
+      "context_next": "① 주변인들에게 뒤처지지 않을까 하는 두려움 때문에 ② 경제적 자유를 얻기 위해",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 22,
+      "line_no": 19,
+      "start_hint": "B9.",
+      "raw": "↳ B9-1. 귀하의 가구원 중 주 생계부양자는 누구십니까?",
+      "context_prev": "가구원 비가구원",
+      "context_next": "① 본인 ② 배우자 ③ 부모 ④ 형제/자매 ⑤ 기타( )",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 3,
+      "start_hint": "",
+      "raw": "B12. 귀하가 소속된 가구의 총 자산(부동산, 예금, 주식투자금 등) 규모는 대략 어느 정도 되십니까?",
+      "context_prev": "관계를 의미합니다. 가족이 아닌 가구원은 가구에서 제외합니다.",
+      "context_next": "① 5천만원 미만 ② 5천만원~1억원 미만",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 4,
+      "start_hint": "B12.",
+      "raw": "① 5천만원 미만 ② 5천만원~1억원 미만",
+      "context_prev": "B12. 귀하가 소속된 가구의 총 자산(부동산, 예금, 주식투자금 등) 규모는 대략 어느 정도 되십니까?",
+      "context_next": "③ 1억원~2억원 미만 ④ 2억원~3억원 미만",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 11,
+      "start_hint": "",
+      "raw": "B13. 한국의 일반적 가정과 비교할 때, 귀하가 속한 가구의 소득수준은 어느 정도 되신다고 생각하십니까?",
+      "context_prev": "⑤ 매우 좋아졌다",
+      "context_next": "① 훨씬 낮다 ② 조금 낮다 ③ 평균 수준이다 ④ 조금 높다 ⑤ 상당히 높다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 12,
+      "start_hint": "B13.",
+      "raw": "① 훨씬 낮다 ② 조금 낮다 ③ 평균 수준이다 ④ 조금 높다 ⑤ 상당히 높다",
+      "context_prev": "B13. 한국의 일반적 가정과 비교할 때, 귀하가 속한 가구의 소득수준은 어느 정도 되신다고 생각하십니까?",
+      "context_next": "B14. 작년과 비교할 때 귀하의 가구 소득 상태는 어떻게 변했다고 생각하십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 13,
+      "start_hint": "",
+      "raw": "B14. 작년과 비교할 때 귀하의 가구 소득 상태는 어떻게 변했다고 생각하십니까?",
+      "context_prev": "① 훨씬 낮다 ② 조금 낮다 ③ 평균 수준이다 ④ 조금 높다 ⑤ 상당히 높다",
+      "context_next": "① 매우 나빠졌다 ② 조금 나빠졌다 ③ 비슷하다 ④ 조금 좋아졌다 ⑤ 매우 좋아졌다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 23,
+      "line_no": 14,
+      "start_hint": "B14.",
+      "raw": "① 매우 나빠졌다 ② 조금 나빠졌다 ③ 비슷하다 ④ 조금 좋아졌다 ⑤ 매우 좋아졌다",
+      "context_prev": "B14. 작년과 비교할 때 귀하의 가구 소득 상태는 어떻게 변했다고 생각하십니까?",
+      "context_next": "",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 24,
+      "line_no": 35,
+      "start_hint": "C3.",
+      "raw": "↳ C3-1. 귀하가 속한 가구는 어떻게 구성되어 있습니까? (모두 선택)",
+      "context_prev": "C3. 귀하가 현재 함께 거주하는 사람은 본인을 포함하여 몇 명 입니까? 명",
+      "context_next": "① 부모님 ② 형제, 자매",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 25,
+      "line_no": 3,
+      "start_hint": "C4.",
+      "raw": "(⇒ C4-1. 이동) (⇒ C4-1. 이동) (⇒ C5. 이동) (⇒ C5. 이동) (⇒ C5. 이동)",
+      "context_prev": "② 약간 불안하다 ③ 보통이다 ④ 대체로 안전하다 ⑤ 매우 안전하다",
+      "context_next": "↳ C4-1. (①, ②를 선택한 경우만 응답) 현재의 주거지가 안전하지 않다고 느끼는 주요 원인은 무엇입니",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 25,
+      "line_no": 4,
+      "start_hint": "C4-1.",
+      "raw": "↳ C4-1. (①, ②를 선택한 경우만 응답) 현재의 주거지가 안전하지 않다고 느끼는 주요 원인은 무엇입니",
+      "context_prev": "(⇒ C4-1. 이동) (⇒ C4-1. 이동) (⇒ C5. 이동) (⇒ C5. 이동) (⇒ C5. 이동)",
+      "context_next": "까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 25,
+      "line_no": 16,
+      "start_hint": "C5.",
+      "raw": "C5. 귀하는 현재 살고 있는 주택 및 주변 지역에서 어떠한 범죄에 가장 많이 노출될 수 있다고 생각하십",
+      "context_prev": "⑤ 매우 안전하다",
+      "context_next": "니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 2,
+      "start_hint": "C8.",
+      "raw": "② 전세 (⇒ C8-1. 이동)",
+      "context_prev": "[1] C8. 현재 거주 중인 곳의 점유 유형에 대해 응답해 주십시오.",
+      "context_next": "[3] ③ 보증금 있는 월세 (⇒ C8-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 3,
+      "start_hint": "C8.",
+      "raw": "③ 보증금 있는 월세 (⇒ C8-1. 이동)",
+      "context_prev": "[2] ② 전세 (⇒ C8-1. 이동)",
+      "context_next": "[4] ④ 보증금 없는 월세 (⇒ C8-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 4,
+      "start_hint": "C8.",
+      "raw": "④ 보증금 없는 월세 (⇒ C8-1. 이동)",
+      "context_prev": "[3] ③ 보증금 있는 월세 (⇒ C8-1. 이동)",
+      "context_next": "[5] ⑤ 기숙사 등 (⇒ C8-1. 이동, 월세와 월 관리비만 응답)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 5,
+      "start_hint": "C8.",
+      "raw": "⑤ 기숙사 등 (⇒ C8-1. 이동, 월세와 월 관리비만 응답)",
+      "context_prev": "[4] ④ 보증금 없는 월세 (⇒ C8-1. 이동)",
+      "context_next": "[6] ⑥ 기타( ) (⇒ C9. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 6,
+      "start_hint": "C8.",
+      "raw": "⑥ 기타( ) (⇒ C9. 이동)",
+      "context_prev": "[5] ⑤ 기숙사 등 (⇒ C8-1. 이동, 월세와 월 관리비만 응답)",
+      "context_next": "[7] ↳ C8-1. (①,②,③,④,⑤ 를 선택한 경우만 응답) 귀하의 주거비용은 대략 어느 정도입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 7,
+      "start_hint": "C8.",
+      "raw": "↳ C8-1. (①,②,③,④,⑤ 를 선택한 경우만 응답) 귀하의 주거비용은 대략 어느 정도입니까?",
+      "context_prev": "[6] ⑥ 기타( ) (⇒ C9. 이동)",
+      "context_next": "[8] 1) 전/월세 보증금 2) 월세 3) 월 관리비",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 26,
+      "line_no": 17,
+      "start_hint": "C11.",
+      "raw": "① 해당사항 없음 (현재 출퇴근 및 통학 하지 않음 ⇒ C12. 이동)",
+      "context_prev": "[16] C11. 귀하가 출퇴근시 (혹은 통학, 업무) 주로 이용하시는 교통수단은 무엇입니까?",
+      "context_next": "[18] ② 도보",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 27,
+      "line_no": 9,
+      "start_hint": "C12.",
+      "raw": "↳ C12-1. 귀하가 집에서 여가(혹은 친교, 쇼핑 등)를 위해 이동할 경우, 목적지까지 소요 시간(편도기준)은",
+      "context_prev": "C12. 귀하가 여가활동(혹은 친교, 쇼핑)을 위해 이동 시 주로 이용하시는 교통수단은 무엇입니까?",
+      "context_next": "얼마나 되십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 28,
+      "line_no": 22,
+      "start_hint": "C18.",
+      "raw": "② 없음 (⇒ C19. 이동)",
+      "context_prev": "C18. 귀하는 부산을 떠날 의사가 있습니까?",
+      "context_next": "↳ C18-1. (②를 선택한 경우만 응답) 부산을 떠나려는 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 28,
+      "line_no": 23,
+      "start_hint": "C18-1.",
+      "raw": "↳ C18-1. (②를 선택한 경우만 응답) 부산을 떠나려는 이유는 무엇입니까?",
+      "context_prev": "② 없음 (⇒ C19. 이동)",
+      "context_next": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 28,
+      "line_no": 38,
+      "start_hint": "C18-2.",
+      "raw": "↳ C18-2. 만약 부산을 떠난다면 그 시기는 언제입니까?",
+      "context_prev": "C18-1. (②를 선택한 경우만 응답) 부산을 떠나려는 이유는 무엇입니까?",
+      "context_next": "① 1년 이내 ② 1년 ~ 3년 이내 ③ 구체적인 계획 없음",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 29,
+      "line_no": 2,
+      "start_hint": "C18-3.",
+      "raw": "↳ C18-3. 지난 조사 이후 부산을 떠날 의사가 없는 것으로 바뀐 이유는 무엇입니까?",
+      "context_prev": "(※ 지난 조사 당시 떠날 의사가 있다고 하였으나, 현재 떠날 의사가 없는 경우만 응답)",
+      "context_next": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 29,
+      "line_no": 4,
+      "start_hint": "",
+      "raw": "① 일자리와 관련된 이유 (취·창업, 인사이동으로 인한 근무지 이동 등)",
+      "context_prev": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "context_next": "② 본인의 학업(교육)을 위해",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 30,
+      "line_no": 4,
+      "start_hint": "C20.",
+      "raw": "① 일자리와 관련된 이유 (취·창업, 인사이동으로 인한 근무지 이동 등)",
+      "context_prev": "C20. 귀하가 현재 거주하시는 지역으로 이주한 이유는 무엇입니까?",
+      "context_next": "② 본인의 학업(교육)을 위해",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 30,
+      "line_no": 17,
+      "start_hint": "C21.",
+      "raw": "C21. 귀하가 현재 거주지역으로 이주한 시기는 언제입니까? 년 월",
+      "context_prev": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "context_next": "C22. 귀하는 부산으로 다시 돌아올 의향이 있으십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 30,
+      "line_no": 18,
+      "start_hint": "C22.",
+      "raw": "C22. 귀하는 부산으로 다시 돌아올 의향이 있으십니까?",
+      "context_prev": "C21. 귀하가 현재 거주지역으로 이주한 시기는 언제입니까? 년 월",
+      "context_next": "① 있음 ② 없음",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 30,
+      "line_no": 20,
+      "start_hint": "C23.",
+      "raw": "C23. 귀하는 타 지역으로 이주한 이후 부산에 얼마나 자주 방문하셨습니까?",
+      "context_prev": "C22. 귀하는 부산으로 다시 돌아올 의향이 있으십니까?",
+      "context_next": "① 1주일에 5회 이상",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 31,
+      "line_no": 15,
+      "start_hint": "D1.",
+      "raw": "↳ D1-1. 귀하는 위 문항에서 선택한 평소의 문화/여가생활에 만족하십니까?",
+      "context_prev": "② 개인 창작활동 및 관련 동호회 활동(그림, 악기 연주 등)",
+      "context_next": "① 전혀 아니다 ② 아니다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 32,
+      "line_no": 14,
+      "start_hint": "D6.",
+      "raw": "(⇒ D6-1. 이동) (⇒ D7. 이동)",
+      "context_prev": "① 있다 ② 없다",
+      "context_next": "↳ D6-1. (①을 선택한 경우만 응답) 귀하가 문화/여가활동에 제약을 받은 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 32,
+      "line_no": 15,
+      "start_hint": "D6-1.",
+      "raw": "↳ D6-1. (①을 선택한 경우만 응답) 귀하가 문화/여가활동에 제약을 받은 이유는 무엇입니까?",
+      "context_prev": "(⇒ D6-1. 이동) (⇒ D7. 이동)",
+      "context_next": "(최대 2개까지 선택)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 14,
+      "start_hint": "E3.",
+      "raw": "① 전혀 마시지 않았다 (⇒ E4. 이동)",
+      "context_prev": "E3. 귀하는 최근 1년 동안 술을 얼마나 자주 마셨습니까?",
+      "context_next": "② 한 달에 1번 미만 (⇒ E3-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 15,
+      "start_hint": "E3.",
+      "raw": "② 한 달에 1번 미만 (⇒ E3-1. 이동)",
+      "context_prev": "① 전혀 마시지 않았다 (⇒ E4. 이동)",
+      "context_next": "③ 한 달에 1번 정도 (⇒ E3-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 16,
+      "start_hint": "E3.",
+      "raw": "③ 한 달에 1번 정도 (⇒ E3-1. 이동)",
+      "context_prev": "② 한 달에 1번 미만 (⇒ E3-1. 이동)",
+      "context_next": "④ 한 달에 2~4번 정도 (⇒ E3-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 17,
+      "start_hint": "E3.",
+      "raw": "④ 한 달에 2~4번 정도 (⇒ E3-1. 이동)",
+      "context_prev": "③ 한 달에 1번 정도 (⇒ E3-1. 이동)",
+      "context_next": "⑤ 일주일에 2~3번 정도 (⇒ E3-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 18,
+      "start_hint": "E3.",
+      "raw": "⑤ 일주일에 2~3번 정도 (⇒ E3-1. 이동)",
+      "context_prev": "④ 한 달에 2~4번 정도 (⇒ E3-1. 이동)",
+      "context_next": "⑥ 일주일에 4번 이상 (⇒ E3-1. 이동)",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 34,
+      "line_no": 19,
+      "start_hint": "E3.",
+      "raw": "⑥ 일주일에 4번 이상 (⇒ E3-1. 이동)",
+      "context_prev": "⑤ 일주일에 2~3번 정도 (⇒ E3-1. 이동)",
+      "context_next": "E3-1. 한 번에 술을 얼마나 마십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 35,
+      "line_no": 19,
+      "start_hint": "E6.",
+      "raw": "(현실에서는 모르지만 소셜 미디어 등으로 알고 지내는 지인 또는 익명 게시판 등)",
+      "context_prev": "d. 온라인",
+      "context_next": "e. 기타( ) ① ②",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 36,
+      "line_no": 10,
+      "start_hint": "E10.",
+      "raw": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "context_prev": "E9. 삶의 질을 높이기 위해서는 어떤 분야의 지원이 가장 필요하다고 생각하십니까?",
+      "context_next": "① 소득 향상 ② 신체·정신적 건강 ③ 복지 서비스 ④ 교육/평생교육",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 36,
+      "line_no": 15,
+      "start_hint": "E11.",
+      "raw": "(1, 2순위 선택) 1순위 ( ), 2순위 ( )",
+      "context_prev": "E10. 귀하는 행복한 삶을 위한 ‘가장 중요한 요건’이 무엇이라고 생각하십니까?",
+      "context_next": "① 재산, 경제력 ② 화목한 가정 ③ 자아 성취 ④ 건강",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 37,
+      "line_no": 4,
+      "start_hint": "",
+      "raw": "나는 나의 문제들에 대해 가족들과 이야기 나눌 수 있다 ① ② ③ ④ ⑤",
+      "context_prev": "나는 나의 문제들에 대해 가족들과 이야기 나눌 수 있다 ① ② ③ ④ ⑤",
+      "context_next": "나는 나의 슬픔과 기쁨을 함께 나눌 친구들이 있다 ① ② ③ ④ ⑤",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 38,
+      "line_no": 4,
+      "start_hint": "F1.",
+      "raw": "④ 아니오 (⇒ F1-1. 이동) ③ 잘 모르겠다 (⇒ F1-1. 이동)",
+      "context_prev": "F1. 귀하는 앞으로 결혼을 하실 의향이 있습니까?",
+      "context_next": "↳ F1-1. 결혼할 의향 혹은 계획이 없는 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 38,
+      "line_no": 23,
+      "start_hint": "F3.",
+      "raw": "(⇒ F3-1. 이동) (⇒ F3-2. 이동) (⇒ F3-2. 이동)",
+      "context_prev": "① 자녀가 없는 것이 좋다 ② 자녀가 있는 것이 좋다 ③ 자녀는 꼭 있어야 한다",
+      "context_next": "↳ F3-1. (F3. ①을 선택한 경우만 응답) 자녀 출산에 대해 부정적인 가장 큰 이유는 무엇입니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 38,
+      "line_no": 25,
+      "start_hint": "F3.",
+      "raw": "(⇒ 응답 후 F4. 이동)",
+      "context_prev": "↳ F3-1. (F3. ①을 선택한 경우만 응답) 자녀 출산에 대해 부정적인 가장 큰 이유는 무엇입니까?",
+      "context_next": "① 임신, 출산, 양육이 막연히 어려울 것 같아서",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 39,
+      "line_no": 1,
+      "start_hint": "F3-2.",
+      "raw": "↳ F3-2. (F3. ②, ③을 선택한 경우만 응답) 몇 명의 자녀가 적정하다고 생각하십니까? 명",
+      "context_prev": "",
+      "context_next": "F4. 귀하의 가치관을 묻는 문항입니다. 귀하의 의견과 일치하는 문항에 체크해 주세요.",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 22,
+      "start_hint": "G1.",
+      "raw": "① ② ③ ④ ⑤ ⑥ ⑦",
+      "context_prev": "(부산시 정책투표, 청년정책 참",
+      "context_next": "여, 청년정책 지원신청, 부산",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 30,
+      "start_hint": "G2.",
+      "raw": "① ② ③ ④ ⑤ ⑧",
+      "context_prev": "a. 중앙정부 행정에 대해 대체로 만족한다",
+      "context_next": "b. 현재 거주하는 지자체 행정에 대해 대체로",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 32,
+      "start_hint": "G2.",
+      "raw": "① ② ③ ④ ⑤ ⑧",
+      "context_prev": "b. 현재 거주하는 지자체 행정에 대해 대체로",
+      "context_next": "만족한다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 34,
+      "start_hint": "G2.",
+      "raw": "① ② ③ ④ ⑤ ⑧",
+      "context_prev": "c. 중앙정부를 대체로 신뢰하는 편이다",
+      "context_next": "d. 현재 거주하는 지자체를 대체로 신뢰하는 편",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 36,
+      "start_hint": "G2.",
+      "raw": "① ② ③ ④ ⑤ ⑧",
+      "context_prev": "d. 현재 거주하는 지자체를 대체로 신뢰하는 편",
+      "context_next": "이다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 44,
+      "start_hint": "G3.",
+      "raw": "① ② ③ ④ ⑤",
+      "context_prev": "a. 현재 거주하는 광역지자체(부산시, 서울시, 경남 등)",
+      "context_next": "에 소속감을 갖고 있다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 46,
+      "start_hint": "G3.",
+      "raw": "① ② ③ ④ ⑤",
+      "context_prev": "b. 현재 살고 있는 기초지자체(ex:구, 군)에 소속감을",
+      "context_next": "갖고 있다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 48,
+      "start_hint": "G3.",
+      "raw": "① ② ③ ④ ⑤",
+      "context_prev": "c. 현재 살고 있는 동네(마을, 아파트단지)에 소속감을",
+      "context_next": "갖고 있다",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 41,
+      "line_no": 52,
+      "start_hint": "G3.",
+      "raw": "① ② ③ ④ ⑤",
+      "context_prev": "d. 나는 부산시에 소속감을 갖고 있다",
+      "context_next": "",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": null,
+      "line_no": null,
+      "start_hint": "",
+      "raw": "[4] (※전출자만 응답)",
+      "context_prev": "[3] 아니다 이다 그렇다",
+      "context_next": "[5] H. 청년정책",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": null,
+      "line_no": null,
+      "start_hint": "",
+      "raw": "[6] (※ 현재 부산 거주자만 응답)",
+      "context_prev": "[5] H. 청년정책",
+      "context_next": "[7] H1. 귀하는 다음의 각 부산시 주요 청년정책에 대해 얼마나 알고 계십니까?",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 43,
+      "line_no": 14,
+      "start_hint": "H2.",
+      "raw": "H2. 귀하는 다음의 각 부산시 주요 청년정책에 대해 얼마나 알고 계십니까?",
+      "context_prev": "1) 정책 참여 경험",
+      "context_next": "2) 정책 참여 경험",
+      "reason": ""
+    },
+    {
+      "type": "candidate",
+      "page": 43,
+      "line_no": 28,
+      "start_hint": "H3.",
+      "raw": "H3. 귀하는 청년정책 정보를 어떠한 경로를 통해 알게 되었습니까?",
+      "context_prev": "H2. 귀하는 다음의 각 부산시 주요 청년정책에 대해 얼마나 알고 계십니까?",
+      "context_next": "H4. 청년정책에 지원할 때 가장 어려운 점은 무엇입니까?",
+      "reason": ""
+    }
+  ]
+}

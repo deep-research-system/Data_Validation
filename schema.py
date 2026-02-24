@@ -1,62 +1,39 @@
 from __future__ import annotations
 
-from enum import Enum
-from typing import List, Union, Literal, Optional
-from pydantic import BaseModel, Field
+from typing import List, Literal, Optional
+from pydantic import BaseModel, Field, field_validator
 
 
-# ----------------------------
-# 공통 타입
-# ----------------------------
-AnswerValue = Union[int, str]
+class LogicCandidate(BaseModel):
+    type: Literal["candidate"] = "candidate"
+    page: Optional[int] = None           # 있으면 좋고 없어도 됨
+    line_no: Optional[int] = None        # 있으면 좋고 없어도 됨
+    start_hint: str = ""                 # 후보가 속한 문항ID 추정(없으면 "")
+    raw: str                              # 후보 문장(원문 그대로)
+    context_prev: str = ""                # 바로 위 1~2줄
+    context_next: str = ""                # 바로 아래 1~2줄
+    reason: str = ""                      # 왜 후보인지(키워드/기호 매칭 등)
+    
+    
+    @field_validator("context_prev", "context_next", "start_hint", "reason", mode="before")
+    @classmethod
+    def none_to_empty(cls, v):
+        return "" if v is None else v
 
-
-class RuleKind(str, Enum):
-    skip = "skip"
-
-
-# ----------------------------
-# Rule 정의
-# ----------------------------
-class BaseRule(BaseModel):
-    """
-    모든 로직 규칙의 공통 필드
-    """
-    type: RuleKind
-    start_col: str
-    value: List[AnswerValue] = Field(default_factory=list)
-
-    # 근거(원문 지시문)
-    raw: Optional[str] = Field(default=None, description="설문지에 적힌 지시문 원문(가능하면 그대로)")
-    note: str = Field(default="", description="로직 판단 이유/보완 설명")
-
-
-class SkipRule(BaseRule):
-    """
-    조건 충족 시 특정 문항으로 즉시 이동
-    예) (문3-1) ② 없음 ☞ 3-2로 이동
-    """
-    type: Literal[RuleKind.skip] = RuleKind.skip
-    end_col: str
-
-
-
-RuleType = Union[SkipRule]
-
-
-# ----------------------------
-# Group 구조
-# ----------------------------
-class RuleGroup(BaseModel):
-    """
-    start_col(출발 문항) 기준으로 규칙 묶음
-    """
-    start_col: str
-    rules: List[RuleType] = Field(default_factory=list)
+class LogicCandidates(BaseModel):
+    items: List[LogicCandidate] = Field(default_factory=list)
+    
+    
+class SkipRule(BaseModel):
+    """단일 선택값 기반 스킵/이동 규칙"""
+    type: Literal["skip"] = "skip"
+    start: str               # 문항ID (예: Q2-1, A4)
+    value: str               # 단일값만 (예: "2")
+    end: str                 # 이동 대상 문항ID (예: A39, A4-1)
+    raw: str = ""            #  원문 근거
+    note: str = ""           # 추가 설명/판단 근거
 
 
 class ValidationSchema(BaseModel):
-    """
-    설문지 전체 로직 구조
-    """
-    groups: List[RuleGroup] = Field(default_factory=list)
+    """전체 결과"""
+    rules: List[SkipRule] = Field(default_factory=list)

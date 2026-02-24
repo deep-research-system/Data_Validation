@@ -19,8 +19,8 @@ def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
 
 if __name__ == "__main__":
     txt_path = extract_text_from_pdf(
-        pdf_path="data/한국생산기술연구원_중.pdf",
-        out_txt="output/한국생산기술연구원_중.txt"
+        pdf_path="data/부산연구원_상.pdf",
+        out_txt="output/부산연구원_상.txt"
     )
 
     print(f"텍스트 추출 완료: {txt_path}")
