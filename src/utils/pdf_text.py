@@ -1,7 +1,6 @@
 import pdfplumber
 from pathlib import Path
 
-# 빠름
 
 def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
     pdf_path = Path(pdf_path)
@@ -19,8 +18,8 @@ def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
 
 if __name__ == "__main__":
     txt_path = extract_text_from_pdf(
-        pdf_path="data/부산연구원_상.pdf",
-        out_txt="output/부산연구원_상.txt"
+        pdf_path="data/test.pdf",
+        out_txt="data/test.txt"
     )
 
     print(f"텍스트 추출 완료: {txt_path}")
