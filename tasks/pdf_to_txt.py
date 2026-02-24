@@ -20,8 +20,8 @@ def extract_text_from_pdf(pdf_path: str | Path, out_txt: str | Path):
 
 if __name__ == "__main__":
     txt_path = extract_text_from_pdf(
-        pdf_path="data/가족보호자_임종기돌봄 설문지(최종)_심층인터뷰 추가_중.pdf",
-        out_txt="output_txt/가족보호자_임종기돌봄 설문지(최종)_심층인터뷰 추가_중.txt"
+        pdf_path="data/test.pdf",
+        out_txt="output_txt/test.txt"
     )
 
     print(f"텍스트 추출 완료: {txt_path}")
